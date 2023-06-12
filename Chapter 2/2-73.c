@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int saturating_add(int x, int y) {
-    int W = sizeof(int) * 8;
+    int W = sizeof(int) << 3;
     int sum = x + y;
     int po_over = !((unsigned)x >> (W - 1)) && !((unsigned)y >> (W - 1)) && ((unsigned)sum >> (W - 1));
     int ne_over = ((unsigned)x >> (W - 1)) && ((unsigned)y >> (W - 1)) && !((unsigned)sum >> (W - 1));

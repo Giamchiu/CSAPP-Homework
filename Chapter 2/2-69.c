@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 unsigned rotate_left(unsigned x, int n){
-    int W = sizeof(int) * 8;
+    int W = sizeof(int) << 3;
     return (x << n) | (x >> (W - n));
 }
 

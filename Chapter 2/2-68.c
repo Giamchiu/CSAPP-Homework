@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int lower_one_mask(int n) {
-    int W = sizeof(int) * 8;
+    int W = sizeof(int) << 3;
     return (unsigned)-1 >> (W - n);
 }
 
