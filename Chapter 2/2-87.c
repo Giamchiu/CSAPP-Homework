@@ -19,12 +19,13 @@
  * 
  * −∞
  * 1 11111 0000000000
- * 0xfC00 - - −∞ −∞
+ * 0xFC00 - - −∞ −∞
  * 
  * Number with hex representation 3BB0
  * 0 01110 1110110000
  * 0x3BB0 123/64 -1 123/128 0.960938
  */
+
 int main() {
     system("pause");
     return 0;
