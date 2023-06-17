@@ -24,21 +24,28 @@ float_bits float_twice(float_bits f) {
 
 int main() {
     float f = 10.555;
-    float_bits absval_f = float_twice(*(unsigned*)&f);
-    printf("%f -> %f\n", f, *(float*)&absval_f);
+    float_bits twice_f = float_twice(*(unsigned*)&f);
+    printf("%f -> %f\n", f, *(float*)&twice_f);
     
     f = -985.678;
-    absval_f = float_twice(*(unsigned*)&f);
-    printf("%f -> %f\n", f, *(float*)&absval_f);
+    twice_f = float_twice(*(unsigned*)&f);
+    printf("%f -> %f\n", f, *(float*)&twice_f);
     
     f = __INT32_MAX__ + 1;
-    absval_f = float_twice(*(unsigned*)&f);
-    printf("%f -> %f\n", f, *(float*)&absval_f);
+    twice_f = float_twice(*(unsigned*)&f);
+    printf("%f -> %f\n", f, *(float*)&twice_f);
     
     f = pow(2, 32);
-    absval_f = float_twice(*(unsigned*)&f);
-    printf("%f -> %f\n", f, *(float*)&absval_f);
-    
+    twice_f = float_twice(*(unsigned*)&f);
+    printf("%f -> %f\n", f, *(float*)&twice_f);
+
+    unsigned uf=0xff000000;
+    twice_f = float_twice(uf);
+    printf("%8f -> %f\n", *(float*)&uf, *(float*)&twice_f);
+    uf=0x7f800000;
+    twice_f = float_twice(uf);
+    printf("%8f -> %f\n", *(float*)&uf, *(float*)&twice_f);
+
     system("pause");
     
     return 0;
