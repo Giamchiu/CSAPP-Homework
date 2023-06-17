@@ -29,6 +29,9 @@ int main() {
     po_f = pow(2, 32), ne_f = -po_f;
     printf("%d\n", *(unsigned*)&ne_f == float_negate(*(unsigned*)&po_f));
     
+    po_f = pow(2, 1200), ne_f = -po_f;
+    printf("%d\n", *(unsigned*)&ne_f == float_negate(*(unsigned*)&po_f));
+    
     system("pause");
     
     return 0;
