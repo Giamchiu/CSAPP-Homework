@@ -48,6 +48,9 @@ int main() {
     a = 351;
     printf("%.2f %d \n", a, float_f2i(*(unsigned*)&a));
 
+    a = -351;
+    printf("%.2f %d \n", a, float_f2i(*(unsigned*)&a));
+
     a = 351.5;
     printf("%.2f %d \n", a, float_f2i(*(unsigned*)&a));
 
@@ -60,12 +63,18 @@ int main() {
     a = -0.9;
     printf("%.2f %d \n", a, float_f2i(*(unsigned*)&a));
 
+    a = pow(-2, 32);
+    printf("%.2f %d \n", a, float_f2i(*(unsigned*)&a));
+
     a = pow(2, 30) + pow(2, 29);
     printf("%.2f %d \n", a, float_f2i(*(unsigned*)&a));
 
     a = pow(-2, 31);
     printf("%.2f %d \n", a, float_f2i(*(unsigned*)&a));
 
-    //system("pause");
+    a = pow(-2, 366);
+    printf("%.2f %d \n", a, float_f2i(*(unsigned*)&a));
+
+    system("pause");
     return 0;
 }
