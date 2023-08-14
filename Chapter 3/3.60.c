@@ -1,6 +1,6 @@
 /*
  * A.
- * x = %rdi n = %rsi result %rax mask = %rdx
+ * x = %rdi n = %esi result %rax mask = %rdx
  * B.
  * result = 0 , mask = 1
  * C.
