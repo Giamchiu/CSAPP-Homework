@@ -1,12 +1,28 @@
 long switch3(long *p1, long *p2, mode_t action){ 
     long result= O; 
     switch(action) { 
-        case MODE_A: 
-        case MODE_B : 
-        case MODE_C : 
-        case MODE_D: 
+        case MODE_A:
+            result = *p2;
+            *p2 = *p1;
+            break; 
+        case MODE_B:
+            result = *p1 + *p2;
+            *p1 = result;
+            break; 
+        case MODE_C:
+            *p1=59;
+            result = *p2;
+            break;
+        case MODE_D:
+            *p1 = *p2;
+            result = 27;
+            break;
         case MODE_E:
-        default: 
+            result = 27;
+            break;
+        default:
+            result = 12;
+            break;
 } 
     return result; 
 }
