@@ -1,4 +1,3 @@
-/* Bubble sort: Array version */
 void bubble_a(long *data, long count) {
     long i, last, size;
     for (last = count-1; last > 0; last--) {
