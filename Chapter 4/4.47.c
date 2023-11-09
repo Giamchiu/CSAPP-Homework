@@ -13,7 +13,7 @@ void bubble_a(long *data, long count) {
 
 int main(){
     long a[4] = {4,3,2,1};
-    bubble_a(a,5);
+    bubble_a(a,4);
 }
 
 /*
