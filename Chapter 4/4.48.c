@@ -34,6 +34,8 @@
  *   cmovl %r11, %r10
  *   rmmovq %r9, 8(%rax)
  *   rmmovq %r10, (%rax)
+ *   irmovq $8, %r8
+ *   addq %r8, %rax
  *   jmp L5
  * L6:
  *   rrmovq %rdi, %rax
