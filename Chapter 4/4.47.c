@@ -12,16 +12,8 @@ void bubble_a(long *data, long count) {
 }
 
 int main(){
-    long a[12] = {5,2,3,4,1};
-    printf("First ");
-    for(int i = 0; i<5; i++)
-        printf("%d ", a[i]);
-    printf("\n");
+    long a[4] = {4,3,2,1};
     bubble_a(a,5);
-    printf("After ");
-    for(int i = 0; i<5; i++)
-        printf("%d ", a[i]);
-    printf("\n");
 }
 
 /*
